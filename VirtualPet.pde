@@ -1,10 +1,13 @@
-background(100, 191, 191);
-noStroke();
+void setup(){
+  size(400, 400);
+  noStroke();
+  background(100, 191, 191);
+  for(var i=0; i <= 300; i++) {
+    fill(255, 255, 255);
+    ellipse((int) random(0,400), (int)random(0,400), (int)random(2,4), (int)random(2,4));}
+};
 
-for(var i=0; i <= 300; i++) {
-  fill(255, 255, 255);
-  ellipse((int) random(0,400), (int)random(0,400), (int)random(2,4), (int)random(2,4));}
-
+void draw() {
 var faceY = 249;
 noStroke();
 
@@ -54,3 +57,4 @@ ellipse(355, 150, 70, 80);
 fill(153, 126, 59);
 ellipse(45, 150, 35, 40);
 ellipse(350, 150, 35, 40);
+};
