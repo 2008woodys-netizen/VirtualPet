@@ -1,9 +1,4 @@
-
-void setup(){
-  size(400,400);
-}
-void draw(){
-  background(100, 191, 191);
+background(100, 191, 191);
 noStroke();
 
 for(var i=0; i <= 300; i++) {
@@ -59,5 +54,3 @@ ellipse(355, 150, 70, 80);
 fill(153, 126, 59);
 ellipse(45, 150, 35, 40);
 ellipse(350, 150, 35, 40);
-};
-
