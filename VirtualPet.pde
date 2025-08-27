@@ -1,18 +1,22 @@
 void setup(){
-  size(400, 400);
   noStroke();
+  size(400,400);
   background(100, 191, 191);
-  for(var i=0; i <= 300; i++) {
+  for(int i=0; i <= 300; i++) {
     fill(255, 255, 255);
     ellipse((int) random(0,400), (int)random(0,400), (int)random(2,4), (int)random(2,4));}
-};
 
-void draw() {
-var faceY = 249;
+}
+void draw(){
+int faceY = 249;
 noStroke();
 
-fill(189, 143, 64); //head
+fill(189, 143, 64); //head, body, neck
+ellipse(200, 500, 400, 400);
 ellipse(200, 200, 300, 350); 
+stroke(0.01);
+arc(200, 200, 300, 350, 0.85, 2.3);
+noStroke();
 
 pushMatrix();
 translate(160, faceY - 90); //face left
