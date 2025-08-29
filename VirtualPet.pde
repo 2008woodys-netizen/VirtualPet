@@ -11,12 +11,13 @@ void draw(){
 int faceY = 249;
 noStroke();
 
-fill(189, 143, 64); //head, body, neck
+fill(148, 113, 64); //head, body, neck
 ellipse(200, 500, 400, 400);
-ellipse(200, 200, 300, 350); 
 stroke(0.01);
 arc(200, 200, 300, 350, 0.85, 2.3);
+fill(189, 143, 64);
 noStroke();
+ellipse(200, 200, 300, 350); 
 
 pushMatrix();
 translate(160, faceY - 90); //face left
