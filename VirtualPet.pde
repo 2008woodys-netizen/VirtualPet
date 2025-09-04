@@ -49,8 +49,8 @@ fill(0,0,0); //eyes
 ellipse(160, faceY - 80, 30, 30);
 ellipse(240, faceY - 80, 30, 30);
 fill(255, 255, 255);
-ellipse(163, faceY - 77, (faceY - 260)/3, (faceY - 260)/3);
-ellipse(243, faceY - 77, (faceY - 260)/3, (faceY - 260)/3);
+ellipse(163, faceY - 77, (faceY - 199)/3, (faceY - 199)/3);
+ellipse(243, faceY - 77, (faceY - 199)/3, (faceY - 199)/3);
 
 
 ellipse(200, faceY + 50, 100, 100);
