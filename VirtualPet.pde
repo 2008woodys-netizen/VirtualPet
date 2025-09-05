@@ -1,21 +1,20 @@
-/*
 import processing.serial.*; //setup arduino stuff
 import cc.arduino.*;
 Arduino arduino;
-*/
+
 float faceY;
-void setup(){
-  //arduino = new Arduino(this, Arduino.list()[0], 57600); //change the [0] to a [1] or [2] etc. if your program doesn't work
+public void setup(){
+  arduino = new Arduino(this, Arduino.list()[0], 57600); //change the [0] to a [1] or [2] etc. if your program doesn't work
   noStroke();
   size(400,400);
 }
-void draw(){
-background(100, 191, 191);
-  for(int i=0; i <= 300; i++) {
-   fill(255, 255, 255, (150 - faceY));
-   ellipse((int) random(0,400), (int)random(0,400), (int)random(2,4), (int)random(2,4));}
-//faceY = (float)arduino.analogRead(5) * 0.5 + 100;
-faceY = 231;
+public void draw(){
+fill((float)(faceY-236)*4, (float)(faceY-150)*4, (float)(faceY-220)*4, 40);
+rect(0, 0, 400, 400);
+fill(0, 0 ,0 , faceY - 200);
+rect(0, 0, 400, 400);
+  
+faceY = (float)arduino.analogRead(5) * 0.5 + 100;
 if (faceY < 215)
   faceY = 215;
 if (faceY > 260)
@@ -45,13 +44,21 @@ popMatrix();
 
 ellipse(200, faceY+22, 150, 190); //face bottom
 
+
 fill(0,0,0); //eyes
 ellipse(160, faceY - 80, 30, 30);
 ellipse(240, faceY - 80, 30, 30);
 fill(255, 255, 255);
-ellipse(163, faceY - 77, (faceY - 199)/3, (faceY - 199)/3);
-ellipse(243, faceY - 77, (faceY - 199)/3, (faceY - 199)/3);
-
+pushMatrix();
+translate(160, faceY - 80);
+rotate(faceY/4);
+ellipse(-1, -3, (faceY - 262)/3, (faceY - 262)/3);
+popMatrix();
+pushMatrix();
+translate(240, faceY - 80);
+rotate(faceY/10);
+ellipse(-1, -3, (faceY - 262)/3, (faceY - 262)/3);
+popMatrix();
 
 ellipse(200, faceY + 50, 100, 100);
 fill(153, 126, 59);
